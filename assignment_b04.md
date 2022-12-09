@@ -116,7 +116,7 @@ pig_latin_xtl <- function (word) {
   i = purrr::detect_index(chars, ~(.x %in% vowel ) )
   
   # handle edge case where there is no vowel
-  if (i == 0) return (stringr::str_c(addition_token, word));
+  if (i == 0) return (stringr::str_c(word, addition_token));
   
   if (i > 1) {
     # For words that begin with consonant sounds or consonant clusters
@@ -188,4 +188,4 @@ test_that("Xiaoting's Pig Latin function tests", {
 })
 ```
 
-    ## Test passed 😀
+    ## Test passed 🌈
